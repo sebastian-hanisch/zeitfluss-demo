@@ -1,5 +1,7 @@
 # Fluss über die Zeit – wie viele Lkw kommen in T Minuten am Gate an, und braucht man dafür das ganze Zeitnetz? – Streamlit-Demo
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-zeitfluss-demo.streamlit.app/)**
+
 Fünfte Erweiterung (Stück 18, **E5 Fluss über die Zeit**) der **Netzwerkfluss-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind von [ssp-demo](https://github.com/sebastian-hanisch/ssp-demo) (Kosten = Fahrzeit) und [dinic-demo](https://github.com/sebastian-hanisch/dinic-demo) (Max-Flow im Zeitnetz):
 anders als die Fall-Demos im Portfolio (ein Anwendungsfall, mehrere Verfahren im Vergleich) zeigt diese Demo **ein** Konzept – den **zeitwiederholten Fluss** von Ford und Fulkerson (1958) – an einem wachsenden Beispiel.
 Ein Terminal will wissen, wie viele Lkw innerhalb einer Frist von T Minuten am Gate ankommen können, wenn jede Straße nur eine bestimmte Zahl Lkw **je Minute** einfahren lässt und jede Fahrt ihre **Fahrzeit** dauert. Ein gewöhnlicher Max-Flow sieht die Zeit nicht.
