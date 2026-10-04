@@ -287,7 +287,7 @@ st.markdown(
 | **Ein generiertes Netz** | Ein Schichtennetz mit erzeugten Kapazitäten und Fahrzeiten, kein reales Straßennetz und keine Fremddaten. |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: die zwölf Stücke der Hauptlinie, die Erweiterungen E1 (Projektauswahl, Graph Cuts, Gomory-Hu-Baum), E4 (Frank-Wolfe, Gradient Projection) und **E5: Fluss über die Zeit** (dieses Stück, gebaut).")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: die dreizehn Stücke der Hauptlinie, die Erweiterungen E1 (Projektauswahl, Graph Cuts, Gomory-Hu-Baum), E4 (Frank-Wolfe, Gradient Projection) und **E5: Fluss über die Zeit** (dieses Stück, gebaut).")
 
 st.markdown("---")
 
