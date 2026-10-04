@@ -11,7 +11,7 @@ Diese Demo rechnet beides, vergleicht Größe und Aufwand – und zeigt die Gren
 Anders als `leercontainer-demo` (Min-Cost-Flow im Zeit-Raum-Netz, Bestandsausgleich mit Vorschau-Fenster; dort sind Kapazitäten „nicht umgesetzt“) geht es hier um den **größten Fluss innerhalb einer Frist** mit Kapazität je Minute und Fahrzeit je Straße, und um die Frage, ob man das Zeitnetz überhaupt braucht; gemeinsam ist nur das Mittel der Zeitexpansion. Die Terminalkapazität am Gate (Abfertigung, Warteschlange) ist Sache von `gate-demo`.
 Vehikel: ein Schichtennetz vom Sammelraum zum Gate (Kapazität 1 bis 6 Lkw je Minute, Fahrzeit 1 bis 5 Minuten), dazu vier feste Lehrnetze (Zwei Straßen, Engpass, Kette, Frühankunft).
 
-**Einordnung in die Reihe (die Kanten des Graphen):** Kind von Successive Shortest Paths (Stück 6: Kosten = Fahrzeit, Rücknahmekanten) und Dinic (Stück 2: Gegenprobe im großen Netz); Stück 1 und 2 liefern den statischen Fluss, der hier zur Schranke wird. Bisher gebaut: die zwölf Stücke der Hauptlinie, die Erweiterungen E1 (drei Stücke), E4 (zwei Stücke) und dieses Stück.
+**Einordnung in die Reihe (die Kanten des Graphen):** Kind von Successive Shortest Paths (Stück 4: Kosten = Fahrzeit, Rücknahmekanten) und Dinic (Stück 2: Gegenprobe im großen Netz); Stück 1 und 2 liefern den statischen Fluss, der hier zur Schranke wird. Bisher gebaut: die zwölf Stücke der Hauptlinie, die Erweiterungen E1 (drei Stücke), E4 (zwei Stücke) und dieses Stück.
 ```
 edmonds-karp-demo → dinic-demo (Max-Flow, Zeitnetz-Gegenprobe)                          [gebaut]
 ssp-demo (Kosten = Fahrzeit, Rücknahme) ─┐
@@ -115,3 +115,7 @@ venv/Scripts/python -m pytest tests/ -v
 ```
 
 Gebaut mit Streamlit und Plotly; der Kern ist reines Python.
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Netzwerkfluss: vom Max-Flow zum Netzdesign](https://sebastianhanisch.net/konzepte-netzwerkfluss.html).

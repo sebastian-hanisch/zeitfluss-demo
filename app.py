@@ -57,7 +57,7 @@ st.markdown(
 Ein Terminal will wissen: wie viele Lkw können in **T Minuten** am Gate ankommen, wenn jede Straße nur eine bestimmte Zahl Lkw **je Minute** einfahren lässt und jede Fahrt ihre **Zeit** dauert? Ein gewöhnlicher Max-Flow (Stück 1 bis 3) sieht die Zeit nicht:
 er sagt nur, wie viele Lkw je Minute durchpassen, nicht, wie lange der erste braucht und wie viel eine lange Umleitung noch bringt, bevor die Frist abläuft.
 Die naheliegende Antwort ist ein **Netz über die Zeit**: jede Kreuzung wird zu einem Knoten je Minute, jede Straße zu einer Kante von Minute k nach Minute k + Fahrzeit, und darauf rechnet man einen Max-Flow. Das ist exakt, aber das Netz wächst mit der Frist.
-**Ford und Fulkerson (1958)** zeigten, dass man es nicht braucht: ein **einziger statischer Fluss** auf dem kleinen Straßennetz, bei dem die Fahrzeit als Kosten je Lkw zählt (Successive Shortest Paths aus Stück 6), in Wege zerlegt und in **jeder Minute wiederholt**, liefert genau den Wert des großen Netzes.
+**Ford und Fulkerson (1958)** zeigten, dass man es nicht braucht: ein **einziger statischer Fluss** auf dem kleinen Straßennetz, bei dem die Fahrzeit als Kosten je Lkw zählt (Successive Shortest Paths aus Stück 4), in Wege zerlegt und in **jeder Minute wiederholt**, liefert genau den Wert des großen Netzes.
 Diese Demo rechnet beides, vergleicht Größe und Aufwand - und zeigt die Grenze des Verfahrens: der Plan für eine Frist ist **für frühere Fristen nicht der beste**.
 """
 )
@@ -283,7 +283,7 @@ st.markdown(
 | **Kapazitäten und Fahrzeiten ändern sich nicht** | Bei zeitabhängigen Kapazitäten (Sperrungen, Schichtwechsel) hilft Warten, und die Wiederholung eines statischen Flusses reicht nicht mehr. Dann braucht man das Zeitnetz. |
 | **Ganze Minuten** | Die Zeit ist in ganzen Minuten gerechnet (T − l + 1 Wiederholungen); im stetigen Modell ist es T − l. |
 | **Frühankunft** | Ein Plan, der für jede Frist zugleich optimal ist (Gale 1959, für eine Senke), existiert, wird aber hier nicht gerechnet; die Demo misst nur, wie viel der Plan für eine Frist bei früheren Fristen verliert. |
-| **Kein Warteraum am Gate** | Das Gate nimmt beliebig viele Lkw je Minute an; eine Terminalkapazität (Abfertigung je Minute, Warteschlange) ist eine andere Aufgabe (Demo „Gate-Warteschlange“). |
+| **Kein Warteraum am Gate** | Das Gate nimmt beliebig viele Lkw je Minute an; eine Terminalkapazität (Abfertigung je Minute, Warteschlange) ist eine andere Aufgabe (Demo „Lkw-Gate: Was bringt ein Terminsystem?“). |
 | **Ein generiertes Netz** | Ein Schichtennetz mit erzeugten Kapazitäten und Fahrzeiten, kein reales Straßennetz und keine Fremddaten. |
 """
 )
@@ -315,6 +315,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Netzwerkfluss: vom Max-Flow zum Netzdesign](https://sebastianhanisch.net/konzepte-netzwerkfluss.html)."
 )
